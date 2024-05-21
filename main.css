@@ -1,0 +1,161 @@
+
+@font-face {
+    font-family: 'Futura Md BT';
+    src: url(./assets/futurab.ttf);
+}
+
+@font-face {
+    font-family: 'Futura Al';
+    src: url(./assets/futural.ttf);
+}
+
+body{
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Futura Md BT';
+}
+
+.navbar-link-2{
+    margin: 0;
+    height: 40px;
+    display: flex;
+    font-family: 'Helvetica';
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #0c0382;
+}
+
+.scnd-x-wrap{
+    display: flex;
+    align-items: center;
+    margin-left: 105px;
+}
+
+.scnd-x img{
+    width: 45px;
+    margin: 5px;
+}
+
+.content-wrap{
+    background-color: #0706DD;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav{
+    color: white;
+
+}
+
+.navbar-container{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    margin-left: 70px;
+}
+
+.navbar-container-x p{
+    font-family: 'Helvetica';
+    margin-bottom: 25px;
+    font-size: 15px;
+
+}
+
+.navbar-container-x h1{
+    width: 390px;
+    margin: -10px 0px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.navbar-logo img{
+    margin: 5px 20px;
+    width: 120px;
+}
+
+.navbar-link{
+    display: flex;
+    font-size: 14px;
+    font-family:'Helvetica';
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: #0c0382;
+}
+
+.navbar-links button{
+    width: 180px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    background-color: #0c0382;
+    border-right: 1px solid rgb(112, 112, 112);
+}
+
+.navbar-links a{
+    margin: 0;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Helvetica';
+    text-transform: uppercase;
+}
+
+#main-content{
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.content-x{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.text-content{
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+
+    justify-content: space-around;
+}
+
+textarea{
+    width: 450px;
+    height: auto;
+    resize: none;
+    padding: 10px; 
+    height: 250px;
+    font-size: 14px;
+    overflow-y: auto;
+    border-radius: 15px;
+    font-family: 'Futura Al';
+}
+
+#comparing-mech{
+    display: flex;
+    justify-content: center;
+}
+
+#comparing-mech button{
+    width: 100px;
+    color: white;
+    padding: 5px;
+    background-color: #0c0382;
+    font-family: 'Futura Md BT';
+}
+.results{
+    padding: 10px;
+}
+
+.results button{
+    width: 130px;
+    color: white;
+    padding: 5px;
+    background-color: #0c0382;
+    font-family: 'Futura Md BT';
+}

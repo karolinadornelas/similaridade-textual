@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/SECPROM.png">
+    <link rel="stylesheet" href="./main.css">
+    <title>Relação de Compatibilidade Textual</title>
+</head>
+<body>
+    <div class="content-wrap">
+        <nav>
+            <div class="navbar-link-2">
+                <div class="scnd-x-wrap">
+                    <div class="scnd-x">
+                        <img src="./assets/FAB-logo.png" alt="logo FAB dourado">
+                    </div>
+                    <div class="scnd-x-link">
+                        <h3>FAB</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <img src="./assets/SECPROM.png" alt="logo SECPROM">
+                </div>
+                <div class="navbar-container-x">
+                    <p>Força Aérea Brasileira</p>
+                    <h1>Secretaria de Avaliação e Promoções</h1>
+                    <p>SECPROM</p>
+                </div>  
+            </div>
+    
+            <div class="navbar-link">
+                <div class="navbar-links">
+                    <button><a href="#">Página Inicial</a></button>
+                    <button><a href="#">Relação de textos</a></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div id="main-content">
+        <div class="content-x">
+                <h3>Relação de Similaridade Textual</h3>
+        </div>
+
+        <div class="text-content">
+            <textarea v-model="texto1" placeholder="Insira o primeiro texto"></textarea>
+            <textarea v-model="texto2" placeholder="Insira o segundo texto"></textarea>
+        </div>
+
+        <div id="comparing-mech">
+            <button v-onclick="compararTextos">COMPARAR</button>
+        </div>   
+        <div class="results">
+            <h3>RESULTADOS:
+            </h3>
+            <p>{{ resultado }}</p>
+            <button>SALVAR ANÁLISE</button>
+        </div>
+        
+        
+        
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
