@@ -1,21 +1,25 @@
-new Vue({
-    el: '#main-content',
-    data: {
-        texto1: '',
-        texto2: '',
-        resultado: ''
-    },
-    methods: {
-        compararTextos() {
-        //capturar os textos
-        var palavrasTexto1 = this.texto1.trim().toLowerCase().split(/\s+/);
-        var palavrasTexto2 = this.texto2.trim().toLowerCase().split(/\s+/);
-        //calculo do tamanho da convergência entre as palavras dos textos
-        var convergencia = palavrasTexto1.filter(palavra => palavrasTexto2.includes(palavra));
-        //calculo da porcentagem de semelhança
-        var semelhanca = (convergencia.length / (palavrasTexto1.length + palavrasTexto2.length - convergencia.length))*100;
-        // resultado
-        this.resultado = "Os textos são semelhantes em: " + semelhanca.toFixed(2) + "%";
-    }
-    }
-});
+function compareTexts() {
+            const text1 = document.getElementById('text1').value.trim();
+            const text2 = document.getElementById('text2').value.trim();
+
+            const words1 = text1.split(/\s+/);
+            const words2 = text2.split(/\s+/);
+
+            const commonWords = words1.filter(word => words2.includes(word));
+
+            const totalWords = Math.max(words1.length, words2.length);
+            const similarity = (commonWords.length / totalWords) * 100;
+            
+            let highlightedText1 = text1;
+            commonWords.forEach(word => {
+                highlightedText1 = highlightedText1.replace(new RegExp(word, 'g'), `<span class="highlight">${word}</span>`);
+            });
+            
+            let highlightedText2 = text2;
+            commonWords.forEach(word => {
+                highlightedText2 = highlightedText2.replace(new RegExp(word, 'g'), `<span class="highlight">${word}</span>`);
+            });
+            document.getElementById('highlightedText1').innerHTML = highlightedText1;
+            document.getElementById('highlightedText2').innerHTML = highlightedText2;
+            document.getElementById('similarityPercentage').innerText = `Porcentagem de similaridade: ${similarity.toFixed(2)}%`;
+        }
