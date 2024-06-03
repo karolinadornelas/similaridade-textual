@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/SECPROM.png">
-    <link rel="stylesheet" href="./main.css">
-    <title>Relação de Compatibilidade Textual</title>
-</head>
-<body>
     <div class="content-wrap">
         <nav>
             <div class="navbar-link-2">
@@ -42,30 +32,26 @@
     
     <div id="main-content">
         <div class="content-x">
-                <h3>Relação de Similaridade Textual</h3>
+            <h3>Relação de Similaridade Textual</h3>
         </div>
 
-        <div class="text-content">
-            <textarea v-model="texto1" placeholder="Insira o primeiro texto"></textarea>
-            <textarea v-model="texto2" placeholder="Insira o segundo texto"></textarea>
+        <div class="comparing-mech">
+            <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea><br>
+            <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea><br>
+            <button onclick="compareTexts()">Comparar</button>
         </div>
 
-        <div id="comparing-mech">
-            <button v-onclick="compararTextos">COMPARAR</button>
-        </div>   
         <div class="results">
-            <h3>RESULTADOS:
-            </h3>
-            <p>{{ resultado }}</p>
-            <button>SALVAR ANÁLISE</button>
-        </div>
-        
-        
-        
-        
-    </div>
+            <div id="result1">
+                <h3>Texto 1:</h3>
+                <div id="highlightedText1"></div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+            <div id="result2">
+                <h3>Texto 2:</h3>
+                <div id="highlightedText2"></div>
+            </div>
+            
+            <p id="similarityPercentage"></p>
+        </div>
+    </div>
