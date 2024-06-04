@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/SECPROM.png">
+    <link rel="stylesheet" href="./main.css">
+    <title>Relação de Compatibilidade Textual</title>
+</head>
+<body>
     <div class="content-wrap">
         <nav>
             <div class="navbar-link-2">
@@ -35,11 +45,15 @@
             <h3>Relação de Similaridade Textual</h3>
         </div>
 
-        <div class="comparing-mech">
-            <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea><br>
-            <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea><br>
+        <div id="comparing-mech">
+            <div class="comparing-box">
+                <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea><br>
+                <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea><br>
+            </div>
             <button onclick="compareTexts()">Comparar</button>
         </div>
+        
+
 
         <div class="results">
             <div id="result1">
@@ -55,3 +69,6 @@
             <p id="similarityPercentage"></p>
         </div>
     </div>
+    <script src="script.js"></script>
+</body>
+</html>
