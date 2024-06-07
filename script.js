@@ -1,46 +1,51 @@
+//textos para testes: https://lingua.com/pt/portugues/leitura/
 function compareTexts() {
     const text1 = document.getElementById('text1').value.trim();
     const text2 = document.getElementById('text2').value.trim();
-
+    if (!text1 || !text2) {
+        alert("Preencha ambos campos de texto para comparar.");
+        return;
+    }
     const stopWords = [
         'a',
         'as', 
         'e',
-        'o', 
-        'os', 
-        'à', 
-        'é', 
-        'em', 
-        'ela', 
-        'ele', 
-        'eles', 
+        'o',
+        'os',
+        'à',
+        'é',
+        'em',
+        'ela',
+        'ele',
+        'eles',
         'nós',
-        'de', 
-        'da', 
-        'do', 
-        'há', 
-        'ante', 
+        'de',
+        'da',
+        'das',
+        'do',
+        'há',
+        'ante',
         'até',
-        'por', 
-        'sem', 
-        'com', 
-        'para', 
-        'sob', 
-        'se', 
-        'per', 
-        'trás', 
-        'como', 
-        'na', 
-        'no', 
-        'nos', 
-        'nas', 
-        'né', 
-        'um', 
+        'por',
+        'sem',
+        'com',
+        'para',
+        'sob',
+        'se',
+        'per',
+        'trás',
+        'como',
+        'na',
+        'no',
+        'nos',
+        'nas',
+        'né',
+        'um',
         'uma',
-        'que', 
-        'quão', 
-        'seus', 
-        'suas', 
+        'que',
+        'quão',
+        'seus',
+        'suas',
         'são'
     ];
 
@@ -73,13 +78,20 @@ function compareTexts() {
     document.getElementById('similarityPercentage').innerText = `Porcentagem de similaridade textual: ${similarity.toFixed(2)}%`;
 }
 
-document.getElementById('get-pdf').addEventListener('click', () => {
+function getPdf() {
     const content = document.getElementById('results');
+    console.log('conteudo em pdf', content);
     const options = {
         margin: 1,
         filename: 'resultados.pdf',
-        html2canvas: { scale: 5 },
-        jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
+        html2canvas: { scale: 2 },
+        jsPDF: { 
+            unit: 'mm', 
+            format: 'A4', 
+            orientation: 'portrait' }
     };
+
     html2pdf().set(options).from(content).save();
-});
+}
+
+document.getElementById('get-pdf').addEventListener('click', getPdf);
