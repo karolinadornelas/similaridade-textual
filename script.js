@@ -7,46 +7,6 @@ function compareTexts() {
         return;
     }
     const stopWords = [
-        'a',
-        'as', 
-        'e',
-        'o',
-        'os',
-        'à',
-        'é',
-        'em',
-        'ela',
-        'ele',
-        'eles',
-        'nós',
-        'de',
-        'da',
-        'das',
-        'do',
-        'há',
-        'ante',
-        'até',
-        'por',
-        'sem',
-        'com',
-        'para',
-        'sob',
-        'se',
-        'per',
-        'trás',
-        'como',
-        'na',
-        'no',
-        'nos',
-        'nas',
-        'né',
-        'um',
-        'uma',
-        'que',
-        'quão',
-        'seus',
-        'suas',
-        'são'
     ];
 
     function removeStopWords(words) {
@@ -82,16 +42,24 @@ function getPdf() {
     const content = document.getElementById('results');
     console.log('conteudo em pdf', content);
     const options = {
-        margin: 1,
+        margin: 0,
         filename: 'resultados.pdf',
-        html2canvas: { scale: 2 },
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
         jsPDF: { 
-            unit: 'mm', 
-            format: 'A4', 
-            orientation: 'portrait' }
+            unit: 'pt',
+            format: 'a4', 
+            orientation: 'portrait'
+        }
     };
 
-    html2pdf().set(options).from(content).save();
-}
+    html2pdf().set(options).from(content).toPdf().get('pdf').then(function (pdf) {
+        var totalPages = pdf.internal.getNumberOfPages();
 
-document.getElementById('get-pdf').addEventListener('click', getPdf);
+        for (let i = 1; i <= totalPages; i++) {
+            pdf.setPage(i);
+            pdf.setFontSize(10);
+            pdf.text(`Page ${i} of ${totalPages}`, pdf.internal.pageSize.getWidth() / 2, pdf.internal.pageSize.getHeight() - 10, { align: 'center' });
+        }
+    }).save();
+}

@@ -193,3 +193,27 @@ textarea{
   background-color: #0c0382;
   font-family: 'Futura Md BT';
 }
+
+/*.pdf-only {
+  display: none;
+}*/
+
+  @media print {
+  /*.pdf-only {
+      display: block;
+  }*/
+
+  #results {
+      page-break-inside: avoid;
+  }
+
+  #result1, #result2 {
+      page-break-inside: avoid;
+      margin-bottom: 20px;
+  }
+
+  .highlight {
+      background-color: yellow;
+      font-weight: bold;
+  }
+}
