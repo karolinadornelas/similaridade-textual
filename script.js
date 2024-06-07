@@ -1,5 +1,3 @@
-//textos para teste https://lingua.com/pt/portugues/leitura/
-
 function compareTexts() {
     const text1 = document.getElementById('text1').value.trim();
     const text2 = document.getElementById('text2').value.trim();
@@ -7,43 +5,43 @@ function compareTexts() {
     const stopWords = [
         'a',
         'as', 
-        'e', 
-        'o',
-        'os',
+        'e',
+        'o', 
+        'os', 
         'à', 
         'é', 
-        'em',
-        'ela',
-        'ele',
-        'eles',
-        'nós', 
+        'em', 
+        'ela', 
+        'ele', 
+        'eles', 
+        'nós',
         'de', 
         'da', 
         'do', 
         'há', 
         'ante', 
-        'até', 
+        'até',
         'por', 
         'sem', 
         'com', 
         'para', 
-        'sob',
-        'se',
+        'sob', 
+        'se', 
         'per', 
         'trás', 
         'como', 
         'na', 
-        'no',
-        'nos',
-        'nas',
+        'no', 
+        'nos', 
+        'nas', 
         'né', 
         'um', 
-        'uma', 
-        'que',
-        'quão',
-        'seus',
-        'suas',
-        'são',
+        'uma',
+        'que', 
+        'quão', 
+        'seus', 
+        'suas', 
+        'são'
     ];
 
     function removeStopWords(words) {
@@ -72,19 +70,16 @@ function compareTexts() {
 
     document.getElementById('highlightedText1').innerHTML = highlightedText1;
     document.getElementById('highlightedText2').innerHTML = highlightedText2;
-    document.getElementById('similarityPercentage').innerText = `Porcentagem de similaridade textual: ${similarity.toFixed(2)}% Importar PDF?}`;
+    document.getElementById('similarityPercentage').innerText = `Porcentagem de similaridade textual: ${similarity.toFixed(2)}%`;
 }
 
-const btnGetPdf = document.querySelector('#get-pdf');
-
-btnGetPdf.addEventListener('click', ()=>{
-    const content = document.querySelector('#results')
+document.getElementById('get-pdf').addEventListener('click', () => {
+    const content = document.getElementById('results');
     const options = {
-        margin: [10, 10, 10, 10],
-        filename: "resultados.pdf",
-        html2canvas: {scale: 2},
-        jsPDF: {unit: "mm", format: 'a4', orientation: 'potarit'},
+        margin: 1,
+        filename: 'resultados.pdf',
+        html2canvas: { scale: 5 },
+        jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
     };
-
-    html2pdf().set(options).from(results).save();
-})
+    html2pdf().set(options).from(content).save();
+});
