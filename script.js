@@ -6,16 +6,9 @@ function compareTexts() {
         alert("Preencha ambos campos de texto para comparar.");
         return;
     }
-    const stopWords = [
-        
-    ];
 
-    function removeStopWords(words) {
-        return words.filter(word => !stopWords.includes(word.toLowerCase()));
-    }
-
-    const words1 = removeStopWords(text1.match(/\b\w+[\w\.,-]*\b/g) || []);
-    const words2 = removeStopWords(text2.match(/\b\w+[\w\.,-]*\b/g) || []);
+    const words1 = text1.match(/\b\w+[\w\.,-]*\b/g) || [];
+    const words2 = text2.match(/\b\w+[\w\.,-]*\b/g) || [];
 
     const commonWords = words1.filter(word => words2.includes(word));
 
