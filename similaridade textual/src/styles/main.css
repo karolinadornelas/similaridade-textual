@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'Futura';
+  src: url('./assets/futurab.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'FuturaL';
+  src: url('./assets/futural.ttf') format('opentype');
+}
+body {
+  background-color: whitesmoke;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-link-2 {
+  margin: 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #0f4098;
+}
+.scnd-x-wrap {
+  display: block;
+  align-items: center;
+}
+.scnd-x {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.scnd-x img {
+  width: 30px;
+  height: 35px;
+  margin: 5px;
+}
+.scnd-x-link {
+  display: flex;
+  width: 250px;
+}
+.scnd-x h3 {
+  margin-top: 0;
+}
+.content-wrap {
+  background-color: #1659bf;
+  background-image: radial-gradient(ellipse at center center, #1659bf 1%, #234b90 100%);
+  margin: 0 auto;
+  padding: 0;
+}
+nav {
+  color: white;
+}
+.navbar-container {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  margin-left: 70px;
+}
+.navbar-container-x p {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.navbar-container-x h1 {
+  width: 390px;
+  margin: -10px 0px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.navbar-logo img {
+  margin: 5px 20px;
+  width: 80px;
+}
+.navbar-link {
+  display: flex;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  background-color: #0f4098;
+}
+.navbar-links button {
+  width: 180px;
+  height: 30px;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  background-color: #0f4098;
+  border-right: 1px solid #707070;
+}
+.navbar-links a {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+#main-content {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+.content-x {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.text-content {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+textarea {
+  width: 450px;
+  resize: none;
+  padding: 10px;
+  height: 450px;
+  margin: 10px;
+  font-size: 14px;
+  overflow-y: auto;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  background-color: whitesmoke;
+}
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+#comparing-mech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comparing-box {
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+}
+.op-btn {
+  display: flex;
+  justify-content: center;
+}
+.op-btn button {
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  background-color: #0f4098;
+  font-family: "Poppins", sans-serif;
+}
+button:hover {
+  background-color: whitesmoke;
+  color: #0f4098;
+  border: 1px solid #0f4098;
+}
+#results {
+  display: none;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+#rebootFields {
+  display: none;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+.op-btn-pdf {
+  display: block;
+  margin: 10px;
+}
+#get-pdf {
+  width: auto;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #0f4098;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+#get-pdf:hover {
+  background-color: whitesmoke;
+  color: #0f4098;
+  border: 1px solid #0f4098;
+}
+@media print {
+  #results {
+    page-break-inside: avoid;
+  }
+  #result1,
+  #result2 {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
+}
+footer {
+  background-color: #0f4098;
+  min-height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: sticky;
+}
+.custom-alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.custom-alert-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.custom-alert-content p {
+  margin-bottom: 10px;
+}
+.custom-alert-content button {
+  background-color: #0f4098;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+}
