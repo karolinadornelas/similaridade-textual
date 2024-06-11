@@ -1,3 +1,11 @@
+:root {
+  --main-bar-blue: #0c0382;
+  --main-bg-blue:  #0706DD;
+  --other-main-bg: #1659bf;
+  --nav-blue: #0f4098;
+  --clear-bg: whitesmoke;
+
+}
 
 @font-face {
   font-family: 'Futura Md BT';
@@ -22,8 +30,9 @@ body{
   display: flex;
   font-family: 'Helvetica';
   font-size: 14px;
+  padding: 5px;
   text-transform: uppercase;
-  background-color: #0c0382;
+  background-color: var(--nav-blue);
 }
 
 .scnd-x-wrap{
@@ -32,13 +41,27 @@ body{
   margin-left: 105px;
 }
 
+.scnd-x{
+  display: flex;
+  
+}
 .scnd-x img{
   width: 45px;
   margin: 5px;
 }
 
+.scnd-x-link img{
+  width: 30px;
+  height: 35px;  
+}
+
+.scnd-x-link{
+  display: flex; 
+  width: 250px; 
+}
 .content-wrap{
-  background-color: #0706DD;
+  background-color: #1659bf;
+  background-image: radial-gradient(ellipse at center center, #1659bf 1%, #234b90 100%);
   margin: 0 auto;
   padding: 0;
 }
@@ -72,7 +95,7 @@ nav{
 
 .navbar-logo img{
   margin: 5px 20px;
-  width: 120px;
+  width: 80px;
 }
 
 .navbar-link{
@@ -80,7 +103,7 @@ nav{
   font-size: 14px;
   font-family:'Helvetica';
   text-transform: uppercase;
-  background-color: #0c0382;
+  background-color: var(--nav-blue);
 }
 
 .navbar-links button{
@@ -89,7 +112,7 @@ nav{
   border-top: none;
   border-left: none;
   border-bottom: none;
-  background-color: #0c0382;
+  background-color: var(--nav-blue);
   border-right: 1px solid rgb(112, 112, 112);
 }
 
@@ -105,6 +128,7 @@ nav{
 #main-content{
   display: block;
   margin: 0 auto;
+  height: auto;
   
 }
 
@@ -124,15 +148,31 @@ nav{
 
 textarea{
   width: 450px;
-  height: auto;
   resize: none;
   padding: 10px; 
-  height: 250px;
+  height: 550px;
   margin: 10px;
   font-size: 14px;
   overflow-y: auto;
-  border-radius: 15px;
+  border-radius: 5px;
   font-family: 'Futura Al';
+  background-color: var(--clear-bg);
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 1px solid slategrey;
+border-radius: 10px;
+
 }
 
 #comparing-mech{
@@ -154,35 +194,40 @@ textarea{
   justify-content: center;
 }
 .op-btn button{
-  width: 100px;
   color: white;
   padding: 5px;
+  margin: 5px;
   justify-content: center;
-  background-color: #0c0382;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--nav-blue);
   font-family: 'Futura Md BT';
 }
 
+button:hover{
+  background-color: var(--clear-bg);
+  color: var(--nav-blue);
+  border: 1px solid var(--nav-blue);
+}
+
 #results{
+  display: none;
   padding: 10px;
   font-family:'Futura Al';
 }
 
-.results button{
-  width: 130px;
-  color: white;
-  padding: 5px;
-  background-color: #0c0382;
-  font-family: 'Futura Md BT';
+#rebootFields{
+  display: none;
 }
-
 .highlight{
   background-color: yellow;
   font-weight: bold;
 }
 
 .op-btn-pdf{
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 10px;
 }
 
 #get-pdf{
@@ -190,8 +235,16 @@ textarea{
   color: white;
   padding: 5px;
   text-transform: uppercase;
-  background-color: #0c0382;
+  background-color: var(--nav-blue);
+  border: none;
   font-family: 'Futura Md BT';
+  display: none;
+}
+
+#get-pdf:hover{
+  background-color: var(--clear-bg);
+  color: var(--nav-blue);
+  border: 1px solid var(--nav-blue);
 }
 
 /*.pdf-only {
@@ -216,4 +269,12 @@ textarea{
       background-color: yellow;
       font-weight: bold;
   }
+}
+
+footer{
+  background-color: var(--nav-blue);
+  min-height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: sticky;
 }
