@@ -7,7 +7,7 @@ document.getElementById('app').innerHTML = `
         <nav>
             <div class="navbar-link-2">
                 <div class="scnd-x">
-                    <img src="./assets/SECPROM.png" alt="logo SECPROM">
+                    <img src="../assets/SECPROM.png" alt="logo SECPROM">
                     <h3>SECPROM</h3>
                 </div>
             </div>
