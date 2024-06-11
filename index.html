@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <link rel="icon" href="./assets/SECPROM.png">
     <link rel="stylesheet" href="./main.css">
     <title>Relação de Compatibilidade Textual</title>
@@ -14,64 +14,74 @@
             <div class="navbar-link-2">
                 <div class="scnd-x-wrap">
                     <div class="scnd-x">
-                        <img src="./assets/FAB-logo.png" alt="logo FAB dourado">
-                    </div>
-                    <div class="scnd-x-link">
+                        <img src="./assets/gladio_80px.png" alt="logo FAB prata">
                         <h3>FAB</h3>
+
                     </div>
+                    <div class="scnd-x-link"></div>
                 </div>
             </div>
-            <div class="navbar-container">
-                <div class="navbar-logo">
+            <!-- <div class="navbar-container">
+                    <div class="navbar-logo">
                     <img src="./assets/SECPROM.png" alt="logo SECPROM">
                 </div>
+                
                 <div class="navbar-container-x">
                     <p>Força Aérea Brasileira</p>
                     <h1>Secretaria de Avaliação e Promoções</h1>
                     <p>SECPROM</p>
-                </div>  
+                </div>
             </div>
             <div class="navbar-link">
                 <div class="navbar-links">
-                    <button><a href="#">Página Inicial</a></button>
-                    <button><a href="#">Relação de textos</a></button>
+                    <button>INSTRUÇÕES</button>
+                    <button><a href="#"></a>SOBRE A FERRAMENTA</button>
                 </div>
-            </div>
+            </div> -->
         </nav>
     </div>
     
     <div id="main-content">
         <div class="content-x">
-            <h3>Relação de Similaridade Textual</h3>
+            <h3>Relação de Reprodução Textual</h3>
         </div>
+
         <div id="comparing-mech">
             <div class="comparing-box">
                 <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea><br>
                 <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea><br>
             </div>
             <div class="op-btn">
-                <button onClick="compareTexts()">Comparar</button>
+                <button onclick="compareTexts()">Comparar</button>
+                <button id="rebootFields" onclick="rebootFields()">Novo Texto</button>
             </div>
         </div>
+        
+
+
         <div id="results">
-            <!--<div id="pdf-header" class="pdf-only">
-                <img src="./assets/SECPROM.png" alt="Logo SECPROM" id="pdf-logo">
-                <h2>Relatório de Compatibilidade Textual</h2>
-            </div>-->
             <div id="result1">
                 <h3>Texto 1:</h3>
                 <div id="highlightedText1"></div>
             </div>
+
             <div id="result2">
                 <h3>Texto 2:</h3>
                 <div id="highlightedText2"></div>
             </div>
+            
             <p id="similarityPercentage"></p>
         </div>
+
         <div class="op-btn-pdf">
-            <button id="get-pdf" onClick="getPdf()">Gerar Arquivo PDF</button>
+            <button id="get-pdf" onclick="getPdf()">Gerar Arquivo PDF</button>
         </div>
+        
     </div>
+
+    <!-- <footer>
+        <h4>footer</h4>
+    </footer> -->
     <script src="script.js"></script>
 </body>
 </html>
