@@ -6,7 +6,7 @@ export function initialPage() {
             <div id="setup-initial-page">
                 <div id="page-id">
                     <div class="icon-container">
-                        <img src="../assets/SECPROM.png" alt="logo SECPROM">
+                        <img src="/SECPROM.svg" alt="logo SECPROM">
                     </div>
                     <div class="title-container">
                         <p>Força Aérea Brasileira</p>
@@ -17,10 +17,10 @@ export function initialPage() {
                 <div id="page-assets">
                     <div class="doc-info-set">
                         <div class="assets-display-doc">
-                            <img src="../assets/doc-files.png" alt="">            
+                            <img src="/doc-files.png" alt="">            
                         </div>
                         <div class="assets-display-info">
-                            <img src="../assets/doc-info.png" alt="">            
+                            <img src="/doc-info.png" alt="">            
                         </div>
                     </div>
                     <h3>Bem-vindo ao Comparador de Texto</h3>
