@@ -19,7 +19,7 @@ export function compareTexts() {
   function highlightWords(text, words) {
       const singularWords = [...new Set(words)];
       singularWords.forEach(word => {
-          const specialCharacters = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const specialCharacters = word.replace(/[.*+?^${}()|[\]\\[-]]/g, '\\$&');
           const regex = new RegExp(`(?<![A-ZÀ-Ú])(${specialCharacters})(?![A-ZÀ-Ú])`, 'gi');
           text = text.replace(regex, `<span class="highlight">${word}</span>`);
       });

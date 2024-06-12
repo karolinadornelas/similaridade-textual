@@ -1,6 +1,7 @@
 import { compareTexts } from './compareTexts.js';
 import { rebootFields } from './rebootFields.js';
 import { getPdf } from './getPDF.js';
+import '/src/styles/main.css';
 
 document.getElementById('app').innerHTML = `
     <div class="content-wrap">

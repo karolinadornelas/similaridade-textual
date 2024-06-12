@@ -38,12 +38,12 @@ body {
   height: 35px;
   margin: 5px;
 }
+.scnd-x h3 {
+  margin-top: 0;
+}
 .scnd-x-link {
   display: flex;
   width: 250px;
-}
-.scnd-x h3 {
-  margin-top: 0;
 }
 .content-wrap {
   background-color: #1659bf;
@@ -161,7 +161,7 @@ textarea::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid #0f4098;
   background-color: #0f4098;
   font-family: "Poppins", sans-serif;
 }
@@ -248,6 +248,7 @@ footer {
 }
 .custom-alert-content button {
   background-color: #0f4098;
+  border: 1px solid #0f4098;
   color: white;
   border: none;
   padding: 8px 20px;

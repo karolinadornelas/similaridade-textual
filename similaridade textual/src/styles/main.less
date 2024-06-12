@@ -29,22 +29,22 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: column;
-}
 
-.scnd-x img {
-  width: 30px;
-  height: 35px; 
-  margin: 5px;
+  img {
+    width: 30px;
+    height: 35px; 
+    margin: 5px;
+  
+  }
 
+  h3{
+    margin-top: 0;
+  }
 }
 
 .scnd-x-link {
   display: flex;
   width: 250px; 
-}
-
-.scnd-x h3{
-  margin-top: 0;
 }
 
 .content-wrap {
@@ -182,7 +182,7 @@ textarea::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid @nav-blue;
   background-color: @nav-blue;
   font-family: "Poppins", sans-serif;
 }
@@ -283,6 +283,7 @@ footer {
 
 .custom-alert-content button {
   background-color: @nav-blue;
+  border: 1px solid @nav-blue;
   color: white;
   border: none;
   padding: 8px 20px;
