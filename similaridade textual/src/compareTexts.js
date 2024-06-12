@@ -7,8 +7,8 @@ export function compareTexts() {
       return;
   }
   
-  const words1 = text1.match(/(?<!\w)[\wà-úÀ-Ú]+(?!\w)/g) || [];
-  const words2 = text2.match(/(?<!\w)[\wá-ùÀ-Ù]+(?!\w)/g) || [];
+  const words1 = text1.match(/(?<!\w)[\wà-úÀ-Ú-ú]+(?!\w)/g) || [];
+  const words2 = text2.match(/(?<!\w)[\wá-ùÀ-Ù-ú]+(?!\w)/g) || [];
   
   const commonWords = words1.filter(word => words2.includes(word));
   
