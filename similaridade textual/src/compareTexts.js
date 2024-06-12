@@ -36,6 +36,9 @@ export function compareTexts() {
   document.getElementById('results').style.display = 'block';
   document.getElementById('rebootFields').style.display = 'block';
   document.getElementById('get-pdf').style.display = 'block';
+  //rolar para os resultados quando acionar o botão de comparar
+  document.getElementById('results').scrollIntoView({behavior :'smooth'});
+
 }
 
 function showAlert(message) {
