@@ -32,7 +32,12 @@
 //             <p>Esta aplicação permite comparar textos, verificar a taxa de reprodução textual e gerar um arquivo PDF com as evidências encontradas.</p>
 //             <button id="start">COMEÇAR <i class="fa-solid fa-arrow-right"></i> </button>
 //         </div>
-//     </div>
+//     </div>`;
+// document.getElementById('start').addEventListener('click', () => {
+//      import('./mainPage.js').then(module => {
+//          module.setupMainPage();
+//      });
+//  });
 // }
 
 // :root {
