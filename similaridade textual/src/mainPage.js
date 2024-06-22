@@ -4,8 +4,10 @@ import { getPdf } from './getPDF.js';
 import '/src/styles/main.css';
 
 document.getElementById('app').innerHTML = `
+<div id="content-container">
     <div class="content-wrap">
         <nav>
+            <a href=./initialPage.js" id="logo-start"><i class="fas fa-arrow-left"></i></a>
             <div class="navbar-link-2">
                 <div class="scnd-x">
                     <img src="./SECPROM.svg" alt="logo SECPROM">
@@ -56,8 +58,8 @@ document.getElementById('app').innerHTML = `
             <button id="custom-alert-okay">OK</button>
         </div>
     </div>
-`;
 
+`;
 document.getElementById('compare-button').addEventListener('click', compareTexts);
 document.getElementById('rebootFields').addEventListener('click', rebootFields);
 document.getElementById('get-pdf').addEventListener('click', getPdf);

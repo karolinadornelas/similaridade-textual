@@ -7,11 +7,16 @@
   src: url('./assets/futural.ttf') format('opentype');
 }
 body {
-  background-color: whitesmoke;
+  background-color: rgb(234, 234, 234);
   margin: 0 auto;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+#content-container{
+  width: 100cqmax;
+}
+
 .navbar-link-2 {
   margin: 0;
   height: auto;
@@ -20,7 +25,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   padding: 5px;
-  text-transform: uppercase;
   background-color: #0f4098;
 }
 .scnd-x-wrap {
@@ -34,26 +38,30 @@ body {
   flex-direction: column;
 }
 .scnd-x img {
-  width: 30px;
-  height: 35px;
+  width: 50px;
+  height: 55px;
   margin: 5px;
 }
 .scnd-x h3 {
   margin-top: 0;
 }
-.scnd-x-link {
-  display: flex;
-  width: 250px;
-}
+
 .content-wrap {
   background-color: #1659bf;
   background-image: radial-gradient(ellipse at center center, #1659bf 1%, #234b90 100%);
   margin: 0 auto;
   padding: 0;
 }
-nav {
+
+nav{
   color: white;
 }
+
+nav a{
+  color: white;
+  margin-left: 25px;
+}
+
 .navbar-container {
   flex-direction: row;
   align-items: center;
@@ -76,13 +84,7 @@ nav {
   margin: 5px 20px;
   width: 80px;
 }
-.navbar-link {
-  display: flex;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  background-color: #0f4098;
-}
+
 .navbar-links button {
   width: 180px;
   height: 30px;
@@ -109,6 +111,7 @@ nav {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  margin: 25px;
 }
 .text-content {
   display: flex;
@@ -172,7 +175,8 @@ button:hover {
 }
 #results {
   display: none;
-  padding: 10px;
+  padding: 50px;
+  text-align: justify;
   font-family: "Poppins", sans-serif;
 }
 #rebootFields {
@@ -184,7 +188,7 @@ button:hover {
 }
 .op-btn-pdf {
   display: block;
-  margin: 10px;
+  margin: 10px 50px;
 }
 #get-pdf {
   width: auto;
@@ -208,7 +212,7 @@ button:hover {
   #result1,
   #result2 {
     page-break-inside: avoid;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   .highlight {
     background-color: yellow;
@@ -220,7 +224,12 @@ footer {
   min-height: 50px;
   width: 100%;
   bottom: 0;
-  position: sticky;
+  margin: 0;
+  padding: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .custom-alert {
   display: none;

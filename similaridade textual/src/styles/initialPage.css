@@ -6,63 +6,45 @@
     --clear-bg: whitesmoke;
 }
 
+body, html{
+    display: flex;
+    margin: 0;
+}
+
 #initial-page {
-    color: white;
     background: linear-gradient(322deg, #0c0382, #207ce0, #1659bf, #0f4098);
+    color: white;
     background-size: 800% 800%;
-    -webkit-animation: AnimationName 34s ease infinite;
-    -moz-animation: AnimationName 34s ease infinite;
-    animation: AnimationName 34s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-
-@-webkit-keyframes AnimationName {
-    0% {background-position: 0% 51%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 51%}
-}
-
-@-moz-keyframes AnimationName {
-    0% {background-position: 0% 51%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 51%}
-}
-
-@keyframes AnimationName {
-    0% {background-position: 0% 51%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 51%}
+    margin: auto 0;
+    font-family: "Poppins";
 }
 
 #setup-initial-page {
     display: flex;
     padding: 35px;
-    margin: 0 25px;
+    margin: 0 0 0 95px;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(14px) saturate(200%);
-    -webkit-backdrop-filter: blur(14px) saturate(200%);
-    background-color: rgba(17, 25, 40, 0.36);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 #page-id {
     display: flex;
-    align-items: center;
+    align-content: center;
 }
 
 #start {
     background-color: var(--main-bar-blue);
     border: 1px solid var(--main-bar-blue);
-
     align-items: center;
+    margin-top: 15px;
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 
 #start:hover{
@@ -87,30 +69,121 @@
 
 .title-container {
     display: block;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .title-container p, h1 {
     padding: 0;
     margin: 0;
+
 }
 
 #page-assets {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 1030px;
+    height: 100vh;
+    color: white;
+    backdrop-filter: blur(14px) saturate(200%);
+    -webkit-backdrop-filter: blur(14px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background: linear-gradient(322deg, #0b0835, #005bbc, #1659bf, #0f4098);
+    background-size: 800% 800%;
+    border-top-left-radius: 375px;
+    border-bottom-left-radius: 375px;
+    animation: blueGrad 10s ease infinite;
 }
+
+@keyframes blueGrad {
+    0% { background-position: 0% 51%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 51%; }
+}
+
 
 .doc-info-set {
     display: flex;
+    margin-top: 155px;
 }
 
 .assets-display-doc img {
-    margin-left: 190px;
     height: 300px;
 }
 
 .assets-display-info {
     position: absolute;
-    margin-top: -15px;
-    margin-left: 350px;
+    margin-top: -50px;
+    margin-left: 150px;
     padding: 10px;
+}
+
+.text-presentation{
+    width: 380px;
+    display: flex;
+    margin-top: 55px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.text-presentation p{
+    margin: 25px;
+    text-align: justify;
+}
+
+@media (min-width: 360px) and (max-height: 740px) {
+    body, html{
+        overflow-x: hidden;
+    }
+    
+    #initial-page {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+
+    #page-assets {
+        display: block;
+        height: 100vh;
+        color: white;
+        backdrop-filter: blur(14px) saturate(200%);
+        -webkit-backdrop-filter: blur(14px) saturate(200%);
+        background: linear-gradient(322deg, #0b0835, #005bbc, #1659bf, #0f4098);
+        background-size: 800% 800%;
+        border-top-left-radius: 375px;
+        border-bottom-left-radius: 0;
+        animation: blueGrad 10s ease infinite;
+        padding-bottom: 25px;
+    }
+    
+    .doc-info-set {
+        display: flex;
+        margin-top: 110px;
+    }
+    
+    .assets-display-doc img {
+        margin-left: 190px;
+        width: 170px;
+        height: 170px;
+    }
+    
+    .assets-display-info img{
+        position: absolute;
+        margin-left: -75px;
+        padding: 10px;
+        width: 170px;
+        height: 70px;
+    }
+    
+    .text-presentation{
+        margin-top: 95px;
+        margin-left: 105px;
+        /* border: 1px solid black; */
+        text-align: justify;
+        padding: 25px;
+    }
 }
