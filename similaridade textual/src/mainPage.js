@@ -23,16 +23,25 @@ document.getElementById('app').innerHTML = `
         </div>
 
         <div id="comparing-mech">
-            <div class="comparing-box">
-                <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea><br>
-                <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea><br>
+            <div class="text-source">
+                <div class="label-fix">
+                    <label for="source1">CPG-1 DE:</label>
+                    <input type="text" id="source1" placeholder="2000">
+                </div>
+                <textarea id="text1" placeholder="Insira o primeiro texto" rows="6" cols="50"></textarea>                
             </div>
-            <div class="op-btn">
-                <button id="compare-button">Comparar</button>
-                <button id="rebootFields">Novo Texto</button>
+            <div class="comparing-box">
+                <div class="label-fix">
+                    <label for="source2">CPG-1 DE:</label>
+                    <input type="text" id="source2" placeholder="2000">
+                </div>
+                <textarea id="text2" placeholder="Insira o segundo texto" rows="6" cols="50"></textarea>
             </div>
         </div>
-        
+        <div class="op-btn">
+            <button id="compare-button">Comparar</button>
+            <button id="rebootFields">Novo Texto</button>
+        </div>
         <div id="results">
             <div id="result1">
                 <h3>Texto 1:</h3>

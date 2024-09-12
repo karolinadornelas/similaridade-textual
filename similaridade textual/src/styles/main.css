@@ -102,31 +102,48 @@ nav a{
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
 }
+
 #main-content {
   display: block;
   margin: 0 auto;
   height: auto;
 }
+
 .content-x {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  margin: 25px;
+  margin:5px;
 }
+
+.text-source {
+  padding: 5px;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.text-source{
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .text-content {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   margin: 0 auto;
   justify-content: space-around;
 }
+
 textarea {
   width: 450px;
   resize: none;
-  padding: 10px;
-  height: 450px;
+  padding: 15px;
+  height: 350px;
   margin: 10px;
   font-size: 14px;
-  overflow-y: auto;
+  overflow-y: hidden;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   background-color: whitesmoke;
@@ -145,13 +162,16 @@ textarea::-webkit-scrollbar-thumb {
 }
 #comparing-mech {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+}
+.label-fix{
+  margin: 5px 15px;
 }
 .comparing-box {
   padding: 5px;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 .op-btn {
   display: flex;
