@@ -7,7 +7,7 @@ document.getElementById('app').innerHTML = `
 <div id="content-container">
     <div class="content-wrap">
         <nav>
-            <a href=./initialPage.js" id="logo-start"><i class="fas fa-arrow-left"></i></a>
+            <a href="./initialPage.js" id="logo-start"><i class="fas fa-arrow-left"></i></a>
             <div class="navbar-link-2">
                 <div class="scnd-x">
                     <img src="./SECPROM.svg" alt="logo SECPROM">
@@ -44,12 +44,12 @@ document.getElementById('app').innerHTML = `
         </div>
         <div id="results">
             <div id="result1">
-                <h3>Texto 1:</h3>
+                <h3 id="label1">Texto 1:</h3>
                 <div id="highlightedText1"></div>
             </div>
 
             <div id="result2">
-                <h3>Texto 2:</h3>
+                <h3 id="label2">Texto 2:</h3>
                 <div id="highlightedText2"></div>
             </div>
             
@@ -67,8 +67,19 @@ document.getElementById('app').innerHTML = `
             <button id="custom-alert-okay">OK</button>
         </div>
     </div>
-
 `;
-document.getElementById('compare-button').addEventListener('click', compareTexts);
+
+document.getElementById('compare-button').addEventListener('click', () => {
+    compareTexts();
+    updateLabels();
+});
 document.getElementById('rebootFields').addEventListener('click', rebootFields);
 document.getElementById('get-pdf').addEventListener('click', getPdf);
+
+function updateLabels() {
+    const source1Label = document.getElementById('source1').value || 'Texto 1';
+    const source2Label = document.getElementById('source2').value || 'Texto 2';
+
+    document.getElementById('label1').textContent = 'Texto 1: CPG-1 DE' + " " + source1Label + ':';
+    document.getElementById('label2').textContent = 'Texto 2: CPG-1 DE' + " " + source2Label + ':';
+}
