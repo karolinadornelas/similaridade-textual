@@ -9,6 +9,8 @@ export function getPdf() {
     const content = `
         <style>
             header{
+                margin-left: -15px;
+                padding: 0;
                 display: flex;
                 justify-content: center;
                 background-color: #0f4098;
@@ -23,7 +25,6 @@ export function getPdf() {
 
             .logo img{
                 width: 110px;
-                
             }
 
             .tile{
@@ -47,19 +48,18 @@ export function getPdf() {
             .text-prop{
                 display: flex;
                 align-items: center;
-                margin-left:10px;
             }
             
             .text-compare{
-                margin:10px;
+                text-align: justify;
+                width:760px
             }
             
-            .file-report{
-                margin: 10px;
+            #file-report{
+                margin: 5px;
             }
             
             .text-compare-h4{
-                margin: 10px;
                 font-weight: 300;
             }
         </style>
