@@ -5,7 +5,7 @@ export function getPdf() {
     const source2 = document.getElementById('source2').value.trim();
     const similarityPercentage = document.getElementById('similarityPercentage').innerText;
 
-    // Criando o conteúdo a ser exportado para PDF
+    //menu personalizado
     const content = `
         <style>
             header{
@@ -117,7 +117,7 @@ export function getPdf() {
         }
     };
 
-    // Gerar o PDF a partir do conteúdo
+    //pdf config
     html2pdf().set(options).from(tempContainer).toPdf().get('pdf').then(function (pdf) {
         var totalPages = pdf.internal.getNumberOfPages();
         for (let i = 1; i <= totalPages; i++) {
@@ -129,6 +129,6 @@ export function getPdf() {
                 { align: 'center' });
         }
     }).save().finally(() => {
-        document.body.removeChild(tempContainer);  // Remove o contêiner temporário
+        document.body.removeChild(tempContainer); 
     });
 }
